@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{ font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{text-decoration: none;}
+
+.container{min-height: 100vh;
+    width: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;}
+
+body{ overflow-x: hidden;}
+
+.title{ 
+    text-align: center;
+font-family: 'Montserrat', sans-serif;
+padding-top: 50px;
+font-size: 3.5rem;
+letter-spacing: .3rem;
+color: darkblue;
+}
+
+
+/*NAVEGACIÓN*/
+header{ width: 100%;
+height: auto;
+background-color:white;
+display: flex;
+flex-direction: row;
+justify-content: center;
+position: fixed;
+top:0;
+z-index: 2;}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 5px;
+}
+li a{
+     font-size: 2rem;
+    padding-left: 20px;
+color: darkblue;}
+
+
+
+/* HOME */
+
+#welcome-section{
+    background-image: url(../img/notebook.jpg);
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+#welcome-section::after{ 
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0.4;
+    z-index: -1;
+
+}
+
+#welcome-section .home{ max-width: 1200px;
+margin: 0 auto;
+padding: 0 50px;
+justify-content:flex-start;}
+
+#welcome-section h1{ display: block;
+width: fit-content;
+font-size: 3.5rem;
+position: relative;
+color: transparent;
+animation: revelacion 0.5s ease forwards;
+animation-delay: 1s;
+z-index: 2;}
+
+#welcome-section h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#welcome-section h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#welcome-section h1:nth-child(3) {
+    animation: revelacion_nombre .5 ease forwards;
+    animation-delay: 3s;
+}
+
+#welcome-section h1 span{ position:absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0;
+background-color: darkblue;
+animation: revelacion_de_texto 1s ease;
+animation-delay: .5s;}
+
+#welcome-section h1:nth-child(1) span{ 
+    animation-delay: .5s;
+}
+#welcome-section h1:nth-child(2) span{ 
+    animation-delay: 1.5s;
+}
+#welcome-section h1:nth-child(3) span{ 
+    animation-delay: 2.5s;
+}
+
+#welcome-section .boton{ 
+padding: 10px 30px;
+color:darkblue;
+background-color: transparent;
+border: 2px solid darkblue;
+font-size: 2rem;
+text-transform: uppercase;
+letter-spacing: 0.1rem;
+margin-top: 30px;
+transition: 0.3s ease background-color;} 
+
+#welcome-section .boton:hover{ 
+    color: white;
+    background-color:darkblue;
+}
+
+/*SECTION SOBRE MI */
+#sobre-mi{background-color: darkblue;}
+
+.sobremi{ display: flex;
+    flex-wrap:wrap ;
+text-align: center;
+justify-content: center;
+max-width: 1500px;
+margin: 0 auto;
+padding: 100px 0;
+position: relative;
+}
+
+.sobre-mi-title{ 
+    text-align: center;
+font-family: 'Montserrat', sans-serif;
+padding-top: 50px;
+font-size: 3.3rem;
+letter-spacing: .3rem;
+color:white;
+}
+
+.sobremi-parrafo{ 
+    
+    height: 300px;
+    margin: 50px;
+    flex-basis: 300px;
+    font-family:'Montserrat', sans-serif; 
+    color: white;
+    line-height: 2.5rem;
+    font-weight: 300;
+font-size: 1.7rem;}
+
+
+/*CONOCIMIENTOS*/
+
+#conocimientos{ background-color: white;}
+
+.conocimientos-title{ 
+    text-align: center;
+font-family: 'Montserrat', sans-serif;
+padding-top: 50px;
+font-size: 3.3rem;
+letter-spacing: .3rem;
+color:darkblue;
+}
+
+
+.figure{display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+align-items: center;}
+
+
+.card-service{
+    height: 150px;
+    position: relative;
+    margin:25px;
+    flex-basis: 300px;
+    background-color: white;
+box-shadow: 1px 5px 14px 0px rgba(0,0,0,0.64);
+	-webkit-box-shadow: 1px 5px 14px 0px rgba(0,0,0,0.64);
+	-moz-box-shadow: 1px 5px 14px 0px rgba(0,0,0,0.64);}
+    
+    .card-service:hover{ transform: scale(1.2)}
+
+    .card-service i{ 
+        font-size: 60px;
+    color:darkblue;
+padding-left: 125px;
+padding-top: 20px;}
+    .card-service h3{font-size: 2rem;
+        margin-top: 30px;
+         text-align: center;
+    background-color: darkblue;
+color: white;}
+    
+/*PROYECTOS TITLE*/
+#projects{background-color: darkblue;
+     }
+
+.projects{display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    align-items: center;
+    position: relative;}
+    
+.projects-title{ 
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 50px;
+    font-size: 3.3rem;
+    letter-spacing: .3rem;
+    color:white;}
+
+    .project-image{ margin: 25px;}
+
+    .project-image:hover{ transform:scale(1.2);}
+
+    .card-project{
+        text-align: center;
+        padding:15px;
+        background-color:white;
+        color:darkblue;
+        font-size: 1.5rem;
+        height: 200px;
+        
+    }
+
+    .button{ border: 1px solid darkblue;
+    padding:5px}
+
+    /* CONTACTO */
+
+    #contacto{ background-image: url(../img/dariusz-sankowski-dvK_CT1Wg78-unsplash.jpg);
+background-size: cover;
+position: relative;
+z-index: 1;}
+
+    #contacto::after{ 
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color:white;
+        opacity: 0.7;
+        z-index: -1;
+    
+    }
+
+    .contacto-title{ text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 50px;
+        font-size: 3.3rem;
+        letter-spacing: .3rem;
+        color:darkblue;}
+    
+    .contacto-parrafo{ 
+        font-family:'Montserrat', sans-serif; 
+        color:darkblue;
+        margin: 50px;
+        line-height: 7rem;
+        font-weight: 300;
+    font-size: 2rem;
+text-align: center;}
+
+.i{ margin: 5px;
+color: darkblue;
+font-size: 30px;}
+
+footer{ height: 150px;
+font-family: 'Montserrat', sans-serif;
+font-size: 2rem;
+text-align: center;
+align-items: center;
+background-color: darkblue;
+color: white;
+padding-top: 50px;}
+
+    /* Keyframes */
+@keyframes revelacion_de_texto{ 
+    50%{width: 100%;
+    left:0; }
+    100%{ width: 0%;
+    left:0;}
+}
+
+@keyframes revelacion{ 
+    100%{ color: white;}
+}
+@keyframes revelacion_nombre{ 
+    100%{ color:darkblue;
+    font-weight: 500;}
+}
+
+/* MEDIA QUERY */ 
+
+@media screen and (max-width:520px ) { 
+    header li a{ font-size: 1rem ;}
+    
+}
